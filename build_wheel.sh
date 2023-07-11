@@ -9,4 +9,4 @@ python3.10 -m venv venv
 source venv/bin/activate
 pip install -U setuptools
 pip install -U wheel pip
-OPENSSL_DIR="${CWD}/openssl" pip wheel --no-cache-dir --no-binary cryptography cryptography==41.0.2
+OPENSSL_DIR="${CWD}/openssl" OPENSSL_STATIC=1 pip wheel --no-cache-dir --no-binary cryptography cryptography==41.0.2
